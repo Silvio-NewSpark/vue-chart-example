@@ -7,9 +7,7 @@ import {
   Legend,
   BarElement,
   CategoryScale,
-  LinearScale,
-  Plugin,
-  ChartData
+  LinearScale
 } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
@@ -46,7 +44,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const chartData = ref<ChartData<'bar'>>({
+    const chartData = ref({
       datasets: []
     })
 
